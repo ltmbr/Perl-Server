@@ -9,7 +9,11 @@ WriteMakefile(
     VERSION_FROM     => 'lib/Perl/Server.pm',
     LICENSE          => 'perl_5',
     MIN_PERL_VERSION => '5.008001',
-
+    
+    EXE_FILES => [
+      "script/perl-server"
+    ],    
+    
     META_MERGE => {
         'meta-spec' => {
           version => 2,
