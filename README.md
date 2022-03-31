@@ -30,7 +30,7 @@ Using Perl::Server:
 
     $ perl-server [options]
         
-These options are the same as L<Plackup Options|https://metacpan.org/pod/plackup#OPTIONS>.
+These options are the same as [Plackup Options](https://metacpan.org/pod/plackup#OPTIONS).
 
 # SEE ALSO
 
