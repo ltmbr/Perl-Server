@@ -5,7 +5,7 @@ use warnings;
 use Cwd;
 use Plack::Runner;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new {
     my $class = shift;
@@ -27,7 +27,7 @@ sub run {
         push(@argv, $type->{module});
         
         push(@argv, '-e');
-        push(@argv, $type->{eval});  
+        push(@argv, $type->{eval});          
     } else {
         push(@argv, '-a');
         push(@argv, $type->{app});        
@@ -38,12 +38,11 @@ sub run {
         push(@argv, 3000);      
     }
     
-    my @args = (
-        env => 'deployment'
-    );    
+    $ENV{PLACK_ENV} = 'perl-server';       
     
-    my $runner = Plack::Runner->new(@args);
-    $runner->parse_options(@argv);
+    my $runner = Plack::Runner->new;    
+    $runner->parse_options(@argv);   
+    $self->_message($runner);
     $runner->run;
 }
 
@@ -63,6 +62,17 @@ sub _type {
     }
     
     return $type;
+}
+
+sub _message {
+    my ($self, $runner) = @_;
+    
+    push @{$runner->{options}}, server_ready => sub {
+        my $args = shift;
+        my $host  = $args->{host}  || 0;
+        my $proto = $args->{proto} || 'http';
+        print STDERR "Perl::Server: Accepting connections at $proto://$host:$args->{port}/\n";
+    };     
 }
 
 1;
