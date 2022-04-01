@@ -37,7 +37,8 @@ WriteMakefile(
     PREREQ_PM => {
         'Cwd'             => 0,
         'Plack'           => 0,
-        'Plack::App::WWW' => 0
+        'Plack::App::WWW' => 0,
+        'Term::ANSIColor' => 0
     },
     
     TEST_REQUIRES => {
