@@ -83,7 +83,7 @@ __END__
  
 =head1 NAME
  
-Perl::Server - A simple Perl server.
+Perl::Server - A simple Perl server launcher.
 
 =head1 SYNOPSIS
 

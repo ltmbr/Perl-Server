@@ -4,7 +4,7 @@ use 5.008001;
 
 WriteMakefile(
     NAME             => 'Perl::Server',
-    ABSTRACT         => 'A simple Perl server',
+    ABSTRACT         => 'A simple Perl server launcher',
     AUTHOR           => 'Lucas Tiago de Moraes <lucastiagodemoraes@gmail.com>',
     VERSION_FROM     => 'lib/Perl/Server.pm',
     LICENSE          => 'perl_5',

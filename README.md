@@ -1,6 +1,6 @@
 # NAME
 
-Perl::Server - A simple Perl server.
+Perl::Server - A simple Perl server launcher.
 
 # SYNOPSIS
 
