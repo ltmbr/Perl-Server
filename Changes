@@ -1,3 +1,6 @@
+0.05 2022-04-01T13:41:00Z
+    - Added some modules as dependencies. 
+
 0.04 2022-04-01T03:20:00Z
     - Improved initiation message with more information and colors.
     - Solved error in module version.    

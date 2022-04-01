@@ -6,7 +6,7 @@ use Cwd;
 use Plack::Runner;
 use Term::ANSIColor;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 sub new {
     my $class = shift;

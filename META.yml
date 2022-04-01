@@ -22,11 +22,12 @@ no_index:
 requires:
   Cwd: '0'
   Plack: '0'
-  Plack::App::WWW: '0'
+  Plack::App::WWW: '0.03'
+  Term::ANSIColor: '0'
   perl: '5.008001'
 resources:
   bugtracker: https://github.com/ltmbr/Perl-Server/issues
   homepage: https://github.com/ltmbr/Perl-Server
   repository: https://github.com/ltmbr/Perl-Server
-version: '0.04'
+version: '0.05'
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
