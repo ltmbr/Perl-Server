@@ -5,8 +5,9 @@ use warnings;
 use Cwd;
 use Plack::Runner;
 use Term::ANSIColor;
+use Net::EmptyPort qw/check_port/;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 sub new {
     my $class = shift;
@@ -42,7 +43,7 @@ sub run {
     
     unless (grep(/^(-p|--port)$/, @argv)) {
         push(@argv, '-p');
-        push(@argv, 3000);      
+        push(@argv, $self->_port);      
     }
     
     $ENV{PLACK_ENV} = 'perl-server';       
@@ -101,6 +102,18 @@ sub _middleware {
     my $middleware = 'enable "AccessLog", format => \'%h %l %u %t "%r" %>s %b "%{Referer}i" "%{User-agent}i"\'';
     
     return $middleware;
+}
+
+sub _port {
+    my $port = 3000;
+    
+    return $port unless check_port($port);
+    
+    while ($port++ < 65000) {
+        last unless check_port($port);
+    }
+    
+    return $port;
 }
 
 sub _name {
