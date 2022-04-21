@@ -44,7 +44,8 @@ WriteMakefile(
     
     TEST_REQUIRES => {
         'Test::More'     => 0,
-        'Test::Requires' => 0
+        'Test::Requires' => 0,
+        'LWP::UserAgent' => 0
     },   
 
     test => {

@@ -4,6 +4,7 @@ author:
   - 'Lucas Tiago de Moraes <lucastiagodemoraes@gmail.com>'
 build_requires:
   ExtUtils::MakeMaker: '0'
+  LWP::UserAgent: '0'
   Test::More: '0'
   Test::Requires: '0'
 configure_requires:
