@@ -33,6 +33,7 @@
       "runtime" : {
          "requires" : {
             "Cwd" : "0",
+            "Getopt::Long" : "0",
             "Net::EmptyPort" : "0",
             "Plack" : "0",
             "Plack::App::WWW" : "0.03",
@@ -59,6 +60,6 @@
          "web" : "https://github.com/ltmbr/Perl-Server"
       }
    },
-   "version" : "0.08",
+   "version" : "0.09",
    "x_serialization_backend" : "JSON::PP version 4.04"
 }
