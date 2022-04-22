@@ -8,7 +8,7 @@ use Term::ANSIColor;
 use Getopt::Long;
 use Net::EmptyPort qw/empty_port check_port/;
 
-our $VERSION = '0.09';
+our $VERSION = '0.10';
 
 sub new {
     my $class = shift;
